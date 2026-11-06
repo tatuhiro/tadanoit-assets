@@ -42,7 +42,7 @@
     <ul>
       <li>公開動画の情報は、その日の動画づくりの参考（どんなテーマや見せ方が見られているか）にだけ使います</li>
       <li>コメントは、返信するかどうかの判断と返信文の作成にだけ使います</li>
-      <li>判断と返信文の作成のため、コメント本文と動画の情報を Anthropic 社の AI（Claude API）に送って処理します。
+      <li>テーマ選びと、返信の判断・返信文の作成のため、公開動画の情報（サムネイルを含む）とコメント本文を Anthropic 社の AI（Claude API）に送って処理します。
         Anthropic 社の取り扱いは <a href="https://www.anthropic.com/legal/privacy">Anthropic のプライバシーポリシー</a> をご覧ください</li>
       <li>情報を販売したり、広告やその他の目的で第三者に提供したりすることはありません</li>
     </ul>
@@ -81,7 +81,60 @@
     </p>
   </section>
 
-  <footer><a href="index.html">トップへ</a><a href="terms.html">利用規約</a></footer>
+  <hr>
+
+  <section lang="en" id="en">
+    <h2>English version</h2>
+    <p class="updated">Effective / last updated: November 6, 2026. If the Japanese and English versions differ, the Japanese version prevails.</p>
+
+    <h3>1. About this tool</h3>
+    <p>"tadanoit-sns" (the "Tool") is a personal tool used only by the operator of "ただのIT社員" (the "Operator") to run the Operator's own YouTube channel (@tadanoIT). The Tool uses YouTube API Services.</p>
+
+    <h3>2. Scopes and data accessed</h3>
+    <p>The Tool is authorized only with the Operator's own Google account, with these scopes:</p>
+    <ul>
+      <li><b>youtube.upload</b>: to upload the Operator's videos to the Operator's channel</li>
+      <li><b>youtube.force-ssl</b>: to search public videos, and to read and reply to comments on the Operator's channel</li>
+    </ul>
+    <p>Data accessed:</p>
+    <ul>
+      <li>The Operator's channel ID</li>
+      <li>Information about public YouTube videos (title, channel name, view/like/comment counts, duration, thumbnail)</li>
+      <li>Public comments posted on the Operator's channel (comment text, author display name, comment ID, publish time)</li>
+    </ul>
+    <p>The Tool never signs in to anyone else's Google account and never accesses private data of other users.</p>
+
+    <h3>3. How data is used</h3>
+    <ul>
+      <li>Public video information is used only as a reference for the day's video planning (which topics and formats people watch)</li>
+      <li>Comments are used only to decide whether to reply and to draft the reply</li>
+      <li>For topic selection and reply drafting, public video information (including thumbnails) and comment text are sent to Anthropic's AI (Claude API) for processing. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy Policy</a></li>
+      <li>Data is never sold or shared with third parties for advertising or any other purpose</li>
+    </ul>
+
+    <h3>4. Storage and deletion</h3>
+    <ul>
+      <li>The OAuth refresh token is stored only in an encrypted secret store (GitHub Secrets)</li>
+      <li>Public video information is used only during processing and is not stored (only the number of results is recorded)</li>
+      <li>Comment text and author names are not stored. Only comment IDs and the action taken are kept to prevent duplicate replies, and they are deleted automatically after 30 days</li>
+      <li>To request deletion, contact us using the contact method below; we will delete the data promptly after confirmation</li>
+    </ul>
+
+    <h3>5. Services used and revoking access</h3>
+    <ul>
+      <li>By using this Tool you are also bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a></li>
+      <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+      <li>You can revoke the Tool's access at any time from the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a></li>
+    </ul>
+
+    <h3>6. Cookies</h3>
+    <p>Neither the Tool nor this website stores or reads visitors' information with cookies or similar technologies.</p>
+
+    <h3>7. Contact and changes</h3>
+    <p>Contact us through the contact feature on our <a href="https://note.com/tadanoit">note creator page</a>. Any changes to this policy will be posted on this page with the updated date.</p>
+  </section>
+
+  <footer><a href="index.html">トップへ</a><a href="terms.html">利用規約</a><a href="#en">English</a></footer>
 </main>
 </body>
 </html>
